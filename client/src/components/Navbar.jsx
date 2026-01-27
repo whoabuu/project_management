@@ -8,7 +8,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../features/themeSlice";
 import { assets } from "../assets/assets";
-// import Logo from './Logo' // If you decided to use the logo component
+import { UserButton } from "@clerk/clerk-react";
 
 const Navbar = ({ setIsSidebarOpen }) => {
   const dispatch = useDispatch();
@@ -61,13 +61,7 @@ const Navbar = ({ setIsSidebarOpen }) => {
             <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-800 mx-1"></div>
 
             {/* User Profile */}
-            <button className="flex items-center gap-2 pl-1 hover:opacity-80 transition-opacity">
-              <img
-                src={assets.profile_img_a}
-                alt="User"
-                className="size-8 rounded-full border-2 border-white dark:border-zinc-800 shadow-sm"
-              />
-            </button>
+            <UserButton/>
           </div>
         </div>
       </div>
